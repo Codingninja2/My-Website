@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        color: red;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: blueviolet;
+        color: orange;
+    }
+
+    .topnav a.active {
+        background-color: yellowgreen;
+        color: yellow;
+    }
+    body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightgray;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea, button {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: grey;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .required {
+            color: red;
+        }
+       
+</style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="home lobby.html">Home Lobby</a>
+        <a href="reservation1.html">Reservations</a>
+        <a href="contacting us.html">Contacting us</a>
+        <a href="about us.html">About us And Reviews</a>
+    </div>
+    <div class="container">
+        <h2>Hotel Reservation Form</h2>
+        <form action="submit_reservation.html" method="POST">
+            <!-- Personal Information -->
+            <label for="name">Full Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <!-- Booking Details -->
+            <label for="room-type">Room Type <span class="required">*</span></label>
+            <select id="room-type" name="room-type" required>
+                <option value="">Select a room type</option>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+                <option value="family">Family Room</option>
+            </select>
+
+            <label for="check-in">Check-In Date <span class="required">*</span></label>
+            <input type="date" id="check-in" name="check-in" required>
+
+            <label for="check-out">Check-Out Date <span class="required">*</span></label>
+            <input type="date" id="check-out" name="check-out" required>
+            <!-- Submit Button -->
+            <button type="submit">Submit Reservation</button>
+        </form>
+    </div>
+</body>
+</html>
