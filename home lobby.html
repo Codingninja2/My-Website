@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Tasty Treat Lounge
-    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Treat Lounge</title>
     <style>
+        /* General Styles */
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
+            background-color: #444;
         }
 
         .topnav {
@@ -33,17 +36,285 @@
             background-color: yellowgreen;
             color: yellow;
         }
+
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .carousel button.prev {
+            left: 10px;
+        }
+
+        .carousel button.next {
+            right: 10px;
+        }
+
+        .carousel button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black
+            ;
+            color: #333;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: blueviolet;
+            color: orange;
+        }
+
+        .topnav a.active {
+            background-color: yellowgreen;
+            color: yellow;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            height: 500px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .carousel img.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel button.prev {
+            left: 20px;
+        }
+
+        .carousel button.next {
+            right: 20px;
+        }
+
+        /* Dots for Navigation */
+        .dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .dots span {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dots span.active {
+            background-color: white;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: gold;
+            color: #333;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 24px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: #4CAF50;
+        }
+
+        .social-links i {
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #444;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover i {
+            background-color: #4CAF50;
+        }
+
+        footer .footer-text {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        section{
+         text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
     </style>
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <div class="topnav">
         <a class="active" href="home lobby.html">Home Lobby</a>
         <a href="reservation1.html">Reservations</a>
-        <a href="contacting us.html">Contacting us</a>
+        <a href="talk to us.html">Talk To Us!</a>
         <a href="about us.html">About us And Reviews</a>
     </div>
-   
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+        <img src="image1.jpg" alt="Delicious Food" class="active">
+        <img src="image2.jpg" alt="Lounge Ambiance">
+        <img src="image3.jpg" alt="Our rooms">
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+    </div>
+
+    <script>
+        // JavaScript for Carousel Functionality
+        const images = document.querySelectorAll('.carousel img');
+        const prevButton = document.querySelector('.carousel button.prev');
+        const nextButton = document.querySelector('.carousel button.next');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+    </script>
+<section> 
+    <h1><u> WE ARE ALWAYS READY TO SERVE !</u></h1>
+    <P>Welcome to our lounge, where comfort meets sophistication.  
+        We provide a serene space to relax, socialize, and unwind.  
+        Enjoy premium food and beverages in an inviting atmosphere.  
+        Whether for work or leisure, our lounge caters to your needs.  
+        Experience exceptional service designed to make you feel at home.  </P>
+
+</section>
+      <footer>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <p class="footer-text">&copy; 2024 Tasty Treat Lounge. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

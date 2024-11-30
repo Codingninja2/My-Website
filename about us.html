@@ -38,23 +38,116 @@
         background-color: gold;
         color: red;
     }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+        }
 </style>
 </head>
 <body>
     <div class="topnav">
         <a class="active" href="home lobby.html">Home Lobby</a>
         <a href="reservation1.html">Reservations</a>
-        <a href="contacting us.html">Contacting us</a>
+        <a href="talk to us.html">Talk To Us!</a>
         <a href="about us.html">About us And Reviews</a>
     </div>
-    <div class="container">
-        <!-- About Us Section -->
-        <div class="section" id="about-us">
+    <header>
+        <h1>About Our Company</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
             <h2>About Us</h2>
-            <div class="about-content">
-                <p>Welcome to our luxurious hotel, where comfort meets elegance. Established in 2010, we pride ourselves on offering world-class hospitality and personalized services that cater to every guest's needs.</p>
-                <p>Located in the heart of the city, our hotel offers premium amenities, from spacious rooms to gourmet dining, a serene spa, and breathtaking views. Whether you're here for business or leisure, our dedicated staff ensures your stay is unforgettable.</p>
+            <p>Welcome to Our Company! We are passionate about delivering exceptional services to our customers and creating a meaningful impact in the industry.</p>
+        </section>
+        <section id="team">
+            <h2>Our Team</h2>
+            <div class="team">
+                The safety of guests isn’t just a responsibility for the team—it’s a passion.<br> Their commitment to excellence transforms the lounge from just another venue into a sanctuary where everyone can feel at ease. In this space, safety is the foundation upon which unforgettable experiences are built.
+                </div>
             </div>
-            
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? Feel free to reach out to us anytime!</p>
+            <p>Email: contact@ourcompany.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Our Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
 </body>
 </html>
